@@ -10,7 +10,8 @@ for path in os.listdir(d):
     if os.path.isfile(full_path):
         print(full_path)
         image1 = Image.open(full_path)
-        im1 = image1.convert('RGB')
+        im1 = image1.convert("RGB")
         imageList.append(im1)
 
-imageList[0].save(d, save_all=True, append_images=imageList[1:])
+imageList[0].save(d + "\out.pdf", save_all=True, append_images=imageList[1:])
+
